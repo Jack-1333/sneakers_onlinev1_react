@@ -1,0 +1,185 @@
+@use '../base/variabless' as v;
+@use '../base/mixins' as m; //importamos la funcion mixins desde la carpeta base
+@use '../custom' as *;
+
+
+.information {
+    // display: none;
+    // visibility: visible;
+    // animation: movimientoL 5s linear infinite;
+    &__text {
+        font-family: 'Black Ops One';
+        font-size: 1rem;
+        @include m.tablet {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+        @include m.desktop {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+    }
+}
+// @keyframes movimientoL {
+//     0% { transform: translate(100%)}
+//     100% { transform: translate(-40%) }
+// }
+//Navigation
+.header {
+    background-color: white;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0rem;
+        width: 100%;
+        z-index: 100;
+        @include m.tablet {
+            left: 3rem;
+        }
+        @include m.desktop {
+            left: 4.5rem;
+        }
+        @include m.desktopLarge {
+            left: 18rem;
+        }
+    }
+}
+
+.marca {
+    font-size: 2.2rem;
+    font-family: 'Agbalumo';
+    text-decoration: none;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #8a8487 0px 0px 20px, #8a8487 0px 0px 30px;
+    margin: 0;
+
+    // @include m.phone {
+    //     font-size: 2.8rem;
+    //     margin: 0;
+    // }
+    @include m.tablet {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+
+    @include m.desktop {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    @include m.desktopLarge {
+        font-size: 3.6rem;
+        margin: 0;
+    }
+}
+
+.list-nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+    margin: 4rem 0 3rem 5rem;
+
+
+    @include m.desktop {
+        flex-direction: row;
+        margin: 0 0 0 5rem;
+    }
+}
+
+.text_nav {
+    color: $blackgray;
+    font-family: 'Black Ops One';
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin: 0;
+
+    @include m.desktopLarge {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+.text_nav:hover {
+    color: $violet !important;
+    border-bottom: $violet 2px solid !important;
+    margin: 0;
+}
+
+.icons {
+    color: #262626;
+    font-weight: bold;
+    font-size: 2.8rem;
+    position: relative;
+    // margin: 0;
+}
+.icons-menu {
+    color: #262626;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.icons:hover,
+.icons-menu:hover {
+    color: $violet !important;
+    font-weight: bold;
+}
+
+.open-menu,
+.close-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    border: transparent;
+    cursor: pointer;
+    
+
+    @include m.desktop {
+        display: none;
+    }
+}
+
+.content-nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 30rem;
+    background-color:white;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .95);
+
+
+    @include m.desktop {
+        opacity: 1;
+        visibility:visible;
+        position: static;
+        background-color: none;
+        box-shadow: none;
+        height: auto;
+    }
+}
+#content-navb {
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+

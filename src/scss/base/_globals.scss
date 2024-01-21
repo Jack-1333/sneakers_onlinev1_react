@@ -1,0 +1,22 @@
+@use './variabless' as v; //importa datos del archivo variables; as(name space) hace el cambio de nombre para codificar
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem;
+    &.no-scroll {
+        overflow: hidden;
+    }
+    &.body-scroll {
+        padding-top: 16rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}

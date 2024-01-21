@@ -1,0 +1,19 @@
+// @use './scss/layout/';
+// @use './scss/base/';
+
+//base
+@use './scss/base/globals';
+// @use './scss/base/index';
+@use './scss/base/mixins';
+@use './scss/base/normalize';
+@use './scss/base/variabless';
+
+//layout
+@use './scss/layout/carrito';
+@use './scss/layout/footer';
+@use './scss/layout/header';
+// @use './scss/layout/index';
+@use './scss/layout/main';
+@use './scss/layout/products';
+
+@use './scss/custom';
