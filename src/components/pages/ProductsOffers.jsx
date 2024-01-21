@@ -92,10 +92,10 @@ export const ProductsOffers = () => {
                   </div>
               </div>
               <div id="zoom" class="col-10">
-                <div id="contenidooferta" class="row">
+                <div id="contenidooferta" className="row">
                 {productsListOffersData.map(producto => 
                       <div className="col-6 col-md-4 col-xl-3 card my-3 py-3">
-                        <img src="{producto.imagen}" alt={producto.imagen} />
+                        <img src={producto.imagen} alt={producto.imagen} />
                         <div className="card-body">
                             <h3 className="card-title">{producto.modelo}</h3>
                             <p className="card-text">{producto.marca}</p>

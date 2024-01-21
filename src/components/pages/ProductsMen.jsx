@@ -1,6 +1,5 @@
 import React from 'react'
 import productsListMenData from '../products/productsListMen.json'
-
 export const ProductsMen = () => {
   return (
     <>
